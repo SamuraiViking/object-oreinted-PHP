@@ -22,5 +22,5 @@ class Person {
 }
 
 $bob = new Person("bob");
-$bob->setAge(18);
-echo $bob->getName();
+$kid = new Child("kid");
+echo $kid->getName();
