@@ -1,14 +1,16 @@
-<?php
+<?php 
 
 class Person {
-    public $name;
-    public $age;
-
+    private $name;
+    private $age;
     public function __construct($name)
     {
-        $this->name=$name;
+        $this->name = $name;
     }
-
+    public function getName()
+    {
+        return $this->name;
+    }
     public function setAge($age)
     {
         if($age < 18)
@@ -17,15 +19,8 @@ class Person {
         }
         $this->age = $age;
     }
-
-    public function getAge()
-    {
-        return $this->age;
-    }
 }
 
-$john = new Person('John Doe');
-$john->setAge(30);
-
-var_dump($john->getAge());
-
+$bob = new Person("bob");
+$bob->setAge(18);
+echo $bob->getName();
